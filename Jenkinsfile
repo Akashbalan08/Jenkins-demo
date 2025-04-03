@@ -14,15 +14,16 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Running tests...'
-                sh 'python test.py'  // Run the Python script (optional)
+                // Use bat instead of sh for Windows
+                bat 'python test.py'  // Ensure Python is installed and added to PATH
             }
         }
         stage('Deploy') {
             steps {
                 echo 'Deploying application...'
-                sh 'cp test.py /var/www/html/'  // Example deployment
+                // Replace with a valid Windows deployment command
+                bat 'copy test.py C:\\inetpub\\wwwroot\\'  // Example for IIS deployment
             }
         }
     }
 }
-
