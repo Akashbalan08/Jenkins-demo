@@ -21,8 +21,6 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying application...'
-                // Replace with a valid Windows deployment command
-                bat 'copy test.py C:\\inetpub\\wwwroot\\'  // Example for IIS deployment
             }
         }
     }
